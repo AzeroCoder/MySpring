@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
     <!--关于配置文件中的service层的配置。     扫描包下面所有的service层。-->
-    <context-component-scan base-package="com.xxx,com.xxx.session,com.xxx.xxx" ></context-component-scan>
+    <context-component-scan base-package="*" ></context-component-scan>
     <!--bean-->
-    <bean id="hero" class="bean.Hero"/>
-    <bean id="heroDao" class="dao.impl.HeroDAOImpl"/>
-    <bean id="heroService" class="service.HeroService">
-        <property name="heroDAO" ref="heroDao"/>
-    </bean>
+
+    <!--<bean id="hero" class="bean.Hero"/>-->
+    <!--<bean id="heroDao" class="dao.impl.HeroDAOImpl">-->
+        <!--<property name="heroService" ref="heroService"/>-->
+    <!--</bean>-->
+    <!--<bean id="heroService" class="service.HeroService">-->
+        <!--<property name="heroDAO" ref="heroDao"/>-->
+    <!--</bean>-->
 
     <!--切面-->
     <aop-config>

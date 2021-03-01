@@ -2,6 +2,7 @@ package dao.impl;
 
 import bean.Hero;
 import dao.HeroDAO;
+import service.HeroService;
 
 /**
  * @Author: zerocoder
@@ -10,6 +11,8 @@ import dao.HeroDAO;
  */
 
 public class HeroDAOImpl implements HeroDAO {
+    HeroService heroService;
+
     @Override
     public Hero getHero(Integer id) {
         Hero hero = new Hero();

@@ -8,7 +8,7 @@ import java.lang.annotation.*;
  * @Date: 2021/2/28 22:55
  */
 @Documented
-@Retention(RetentionPolicy.CLASS)
+@Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.FIELD)
 public @interface Inject {
     String name() default "";

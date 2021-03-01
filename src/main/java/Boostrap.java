@@ -10,11 +10,11 @@ public class Boostrap {
 
     private static BeanInitializer beanLoader;
 
-    public static void start(){
-        beanLoader = new BeanInitializer();
+    public static <T> void start(T obj){
+        beanLoader = new BeanInitializer(obj);
     }
 
     public static  <T> T  getBean(String id){
-        return beanLoader.getBean(id);
+        return (T) beanLoader.getBean(id);
     }
 }
