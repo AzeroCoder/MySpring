@@ -1,11 +1,9 @@
 package ioc;
 
-import aop.AspectDefinition;
-import aop.AspectPointcut;
+import aop.definition.AspectDefinition;
+import aop.definition.AspectPointcut;
 import cn.hutool.core.io.FileUtil;
-import cn.hutool.core.io.IoUtil;
 import cn.hutool.core.util.StrUtil;
-import cn.hutool.core.util.XmlUtil;
 import ioc.definition.BeanDefinition;
 import ioc.definition.BeanProperties;
 import ioc.definition.ConstructorArg;
@@ -16,8 +14,6 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import util.Constant;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -46,8 +42,8 @@ public class BeanDefinitionReader {
 
     public void loadContext(){
         Element elements = configDocument.selectFirst("context-component-scan");
-        if (StrUtil.isNotEmpty(elements.text())){
-            initionalizer.setContextPath(elements.text());
+        if (StrUtil.isNotEmpty(elements.attr("base-package"))){
+            initionalizer.setContextPath(elements.attr("base-package"));
         }
     }
 

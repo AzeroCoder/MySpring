@@ -1,6 +1,6 @@
 package aop.proxy;
 
-import aop.AspectDefinition;
+import aop.definition.AspectDefinition;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
 import enums.AspectScope;
@@ -61,32 +61,4 @@ public class CglibMethodInterceptor implements MethodInterceptor {
         }
         return result;
     }
-    /**
-     * intercept方法每次调用代理对象，都会执行intercept
-     */
-//    @Override
-//    public Object intercept(Object proxy, Method method, Object[] args,
-//                            MethodProxy methodProxy) throws Throwable {
-//        // 当前 目标方法返回值
-//        Object result = null;
-//        try {
-//            try {
-//                // 前置通知
-//                LogUtil.logBefore(method.getName(), args);
-//                // 调用目标方法
-//                result = methodProxy.invokeSuper(proxy, args);
-//            } finally {
-//                // 后置通知
-//                LogUtil.logAfter(method.getName(), args);
-//            }
-//            // 返回通知
-//            LogUtil.logAfterReturning(method.getName(), result);
-//
-//        } catch (Throwable e) {
-//            LogUtil.logAfterThrowing(method.getName(), e);
-//            throw e;
-//        }
-//
-//        return result;
-//    }
 }

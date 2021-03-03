@@ -1,7 +1,7 @@
 package ioc;
 
-import aop.AspectDefinition;
-import aop.AspectPointcut;
+import aop.definition.AspectDefinition;
+import aop.definition.AspectPointcut;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
 import enums.AspectScope;

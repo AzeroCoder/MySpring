@@ -1,6 +1,6 @@
 package aop.proxy;
 
-import aop.AspectDefinition;
+import aop.definition.AspectDefinition;
 import cn.hutool.core.util.ReflectUtil;
 import cn.hutool.core.util.StrUtil;
 import enums.AspectScope;
@@ -64,26 +64,4 @@ public class JdkInvocationHandler <T> implements InvocationHandler {
         }
         return result;
     }
-//    @Override
-//    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-//        Object result = null;
-//        try {
-//            try {
-//                LogUtil.logBefore(method.getName(), args);
-//                // 调用目标方法
-//                result = method.invoke(target, args);
-//            } finally {
-//                // 后置通知
-//                LogUtil.logAfter(method.getName(), args);
-//            }
-//            // 返回通知
-//            LogUtil.logAfterReturning(method.getName(), result);
-//
-//        } catch (Throwable e) {
-//            ogUtil.logAfterThrowing(method.getName(), e);
-//            throw e;
-//        }
-//
-//        return result;
-//    }
 }

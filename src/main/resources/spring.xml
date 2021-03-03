@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
     <!--关于配置文件中的service层的配置。     扫描包下面所有的service层。-->
-    <context-component-scan base-package="*" ></context-component-scan>
+    <context-component-scan base-package="" ></context-component-scan>
     <!--bean-->
 
     <!--<bean id="hero" class="bean.Hero"/>-->
